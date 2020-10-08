@@ -382,8 +382,7 @@ int ImGuiStyleShadowTexConfig::CalcConvexTexWidth() const
 
 int ImGuiStyleShadowTexConfig::CalcConvexTexHeight() const
 {
-    // We have to pad the texture enough that we don't go off the edges when we expand the corner triangles
-    return (int)((TexCornerSize / ImCos(IM_PI * 0.25f)) + (GetConvexTexPadding() * 2));
+    return CalcConvexTexWidth(); // Same value
 }
 
 
